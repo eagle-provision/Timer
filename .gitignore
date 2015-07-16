@@ -1,0 +1,6 @@
+*
+!*.txt
+!*.md
+!*.nim
+!.gitignore
+!stopwatch.nimble
