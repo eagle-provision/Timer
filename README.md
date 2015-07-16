@@ -1,7 +1,6 @@
 # Stopwatch
 
-A simple benchmarking/timer library based on nim's lib/system/timers.nim
-
+examples
 
 ```nim
 import stopwatch
@@ -16,6 +15,9 @@ c.stop()
 echo ($(c.clockStop - c.clockStart) & "ns") # in nanoseconds
 echo c.seconds
 
+```
+
+```nim
 # another example using bench, a template that generates the clock.start/stop code as shown in the first example
 var c0, c1, c2: clock
 
