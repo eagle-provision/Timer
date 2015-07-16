@@ -1,7 +1,5 @@
 # Stopwatch
 
-examples
-
 ```nim
 import stopwatch
 from os import sleep
@@ -15,9 +13,6 @@ c.stop()
 echo ($(c.clockStop - c.clockStart) & "ns") # in nanoseconds
 echo c.seconds
 
-```
-
-```nim
 # another example using bench, a template that generates the clock.start/stop code as shown in the first example
 var c0, c1, c2: clock
 
