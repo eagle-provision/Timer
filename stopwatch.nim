@@ -130,7 +130,7 @@ type clock* = object
 
 proc start*(c: var clock) {.inline.} = c.clockStart = getTicks().Nanos
 proc stop*(c: var clock) {.inline.} = c.clockStop = getTicks().Nanos
-proc seconds*(c: clock): string {.inline.} = $(float(c.clockStop - c.clockStart)/1000000000) & "s"
+proc seconds*(c: clock): string {.inline.} = $(float64(c.clockStop - c.clockStart)/1000000000) & "s"
 
 import strutils
 
