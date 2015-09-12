@@ -1,6 +1,9 @@
 # Stopwatch
 
 ```nim
+
+# Stopwatch
+
 import stopwatch
 from os import sleep
 
@@ -11,7 +14,7 @@ c.start()
 sleep(1)
 c.stop()
 echo ($(c.clockStop - c.clockStart) & "ns") # in nanoseconds
-echo c.seconds
+echo c.seconds, "s"
 
 # another example using bench, a template that generates the clock.start/stop code as shown in the first example
 var c0, c1, c2: clock
@@ -22,12 +25,11 @@ bench(c):
   bench(c1):
     sleep(50)
   bench(c2):
-    for i in 0..<2
+    for i in 0..<2:
       sleep(1)
 
-echo "bench 0): ", c0.seconds
-echo "bench 1): ", c1.seconds
-echo "bench 2): ", c2.seconds
-echo "total: ", c.seconds
-
+echo "bench 0): ", c0.seconds, "s"
+echo "bench 1): ", c1.seconds, "s"
+echo "bench 2): ", c2.seconds, "s"
+echo "total: ", c.seconds, "s"
 ```
