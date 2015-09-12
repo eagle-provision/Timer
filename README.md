@@ -2,8 +2,6 @@
 
 ```nim
 
-# Stopwatch
-
 import stopwatch
 from os import sleep
 
